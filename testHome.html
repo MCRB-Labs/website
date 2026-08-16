@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Scroll Demo | MCRB Labs</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Experimental scroll-driven Three.js + GSAP homepage concept for MCRB Labs.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23101007%22/><rect x=%229%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23E7FFA8%22/><rect x=%2254%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23B9F23D%22/><rect x=%229%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%237FA31C%22/><rect x=%2254%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%233C4D0C%22/><text x=%2227.5%22 y=%2234%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>M</text><text x=%2272.5%22 y=%2234%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>C</text><text x=%2227.5%22 y=%2279%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>R</text><text x=%2272.5%22 y=%2279%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23F4F3E9%22 text-anchor=%22middle%22>B</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    corePlugins: { preflight: false },
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Space Grotesk', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace']
+        }
+      }
+    }
+  };
+</script>
+</head>
+<body class="home">
+
+<nav class="site-nav">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-word"><span class="w1">MCRB</span><span class="w2">Labs</span></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="projects/focus.html" class="btn btn-primary hide-mobile">Download Focus</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line class="l1" x1="3" y1="6" x2="21" y2="6"/><line class="l2" x1="3" y1="12" x2="21" y2="12"/><line class="l3" x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="support.html">Support</a>
+  <a href="contact.html">Contact</a>
+  <a href="projects/focus.html">Download Focus</a>
+</div>
+
+<canvas id="webgl-bg" class="fixed inset-0 w-screen h-screen block pointer-events-none -z-20" aria-hidden="true"></canvas>
+<div class="fixed inset-0 -z-10 pointer-events-none" style="background: radial-gradient(ellipse 60% 62% at 50% 50%, rgba(11,11,8,0.82) 0%, rgba(11,11,8,0.5) 50%, transparent 80%);" aria-hidden="true"></div>
+
+<main id="scroll-content" class="relative">
+
+  <section class="panel-copy min-h-screen flex flex-col justify-center px-6" data-panel="1">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="font-mono text-xs tracking-[0.2em] uppercase text-[#CBF25C] mb-5">MCRB Labs</p>
+      <h1 class="font-display text-4xl md:text-6xl font-bold text-[#F4F3E9] leading-[1.08] mb-6">We build tools for people who already care about their focus.</h1>
+      <p class="font-body text-lg text-[#ACAA96] max-w-xl mx-auto mb-8">MCRB Labs makes software and hardware that work together quietly in the background: an app that scores your day, and a USB hub that listens to it.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="projects/focus.html" class="btn btn-primary btn-lg">Explore Focus</a>
+        <a href="projects.html" class="btn btn-secondary btn-lg">View all projects</a>
+      </div>
+      <p class="font-mono text-xs text-[#6E6C5B] mt-6">Scroll to see how it fits together</p>
+    </div>
+  </section>
+
+  <section class="panel-copy min-h-screen flex flex-col justify-center px-6" data-panel="2">
+    <div class="max-w-xl mx-auto">
+      <p class="font-mono text-xs tracking-[0.2em] uppercase text-[#CBF25C] mb-5">Why we exist</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold text-[#F4F3E9] leading-tight mb-6">Most productivity tools ask you to manage them. Ours just watches, quietly, and tells you the truth.</h2>
+      <p class="font-body text-base md:text-lg text-[#ACAA96]">No manual timers. No clocking in and out. No dashboards you have to remember to check. We're building small, honest tools, and we're doing it as students, in public, one project at a time.</p>
+    </div>
+  </section>
+
+  <section class="panel-copy min-h-screen flex flex-col justify-center px-6" data-panel="3">
+    <div class="max-w-3xl mx-auto">
+      <p class="font-mono text-xs tracking-[0.2em] uppercase text-[#CBF25C] mb-5 text-center">What we're building</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold text-[#F4F3E9] text-center mb-12">Two products, one system</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <span class="tag tag-accent mb-3 inline-block">Software · In development</span>
+          <h3 class="font-display text-xl font-bold text-[#F4F3E9] mb-2">Focus</h3>
+          <p class="font-body text-[#ACAA96]">An automatic screen-time tracker for Windows that classifies your activity and scores your day 0–100.</p>
+        </div>
+        <div>
+          <span class="tag tag-accent mb-3 inline-block">Hardware · Concept</span>
+          <h3 class="font-display text-xl font-bold text-[#F4F3E9] mb-2">Focus USB Hub</h3>
+          <p class="font-body text-[#ACAA96]">A USB hub controlled by Focus. It can throttle or cut charging when your screen time crosses a line.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel-copy min-h-screen flex flex-col justify-center px-6" data-panel="4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="font-mono text-xs tracking-[0.2em] uppercase text-[#CBF25C] mb-10">By the numbers</p>
+      <div class="grid grid-cols-3 gap-8">
+        <div>
+          <span class="stat-num block font-display text-4xl md:text-5xl font-bold text-[#F4F3E9]">2</span>
+          <span class="font-body text-sm text-[#ACAA96] mt-2 block">Founders building every part of it</span>
+        </div>
+        <div>
+          <span class="stat-num block font-display text-4xl md:text-5xl font-bold text-[#F4F3E9]">0</span>
+          <span class="font-body text-sm text-[#ACAA96] mt-2 block">Servers your activity data touches</span>
+        </div>
+        <div>
+          <span class="stat-num block font-display text-4xl md:text-5xl font-bold text-[#F4F3E9]">100%</span>
+          <span class="font-body text-sm text-[#ACAA96] mt-2 block">Of Focus runs on your machine</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel-copy min-h-screen flex flex-col justify-center px-6" data-panel="5">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="font-display text-3xl md:text-5xl font-bold text-[#F4F3E9] mb-4">See what Focus does with your screen time.</h2>
+      <p class="font-body text-lg text-[#ACAA96] mb-8">An honest, automatic focus score for Windows. No setup required.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="projects/focus.html" class="btn btn-primary btn-lg">Explore Focus</a>
+        <a href="projects.html" class="btn btn-secondary btn-lg">View all projects</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer relative">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-word"><span class="w1">MCRB</span><span class="w2">Labs</span></span></a>
+        <p>Software and hardware for people who already care about their focus. Built by Rian Borkakoty and Matteo Carriere.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="projects/focus.html">Focus</a></li>
+          <li><a href="projects/usb-hub.html">Focus USB Hub</a></li>
+          <li><a href="projects.html">All projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span><a class="cpy-mark" href="testHome.html">©</a> 2026 MCRB Labs. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module" src="js/home-3d.js"></script>
+</body>
+</html>

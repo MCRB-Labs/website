@@ -69,6 +69,24 @@
   color: var(--text-primary);
 }
 
+/* ---- dark scope for the homepage's scroll-driven 3D experience ---- */
+body.home {
+  --bg: #0B0B08;
+  --bg-elevated: #121210;
+  --card: #16160F;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #F4F3E9;
+  --text-secondary: #ACAA96;
+  --text-tertiary: #6E6C5B;
+  --divider: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(11, 11, 8, 0.6);
+  --accent-fg: #CBF25C;
+  --productive-fg: #CBF25C;
+  --distracted-fg: #B8B6A0;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lift: 0 6px 18px rgba(0, 0, 0, 0.35), 0 26px 52px rgba(0, 0, 0, 0.45);
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
