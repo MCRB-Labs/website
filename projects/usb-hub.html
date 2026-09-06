@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Focus USB Hub: A USB Hub Controlled by Your Focus Score | MCRB Labs</title>
 <meta name="description" content="The Focus USB Hub is a piece of hardware controlled by the Focus app. Cross your screen-time line, and it can throttle or cut charging until you're back on track.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23101007%22/><rect x=%229%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23E7FFA8%22/><rect x=%2254%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23B9F23D%22/><rect x=%229%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%237FA31C%22/><rect x=%2254%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%233C4D0C%22/><text x=%2227.5%22 y=%2234%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>M</text><text x=%2272.5%22 y=%2234%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>C</text><text x=%2227.5%22 y=%2279%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>R</text><text x=%2272.5%22 y=%2279%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23F4F3E9%22 text-anchor=%22middle%22>B</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23101007%22/><rect x=%229%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23E7FFA8%22/><rect x=%2254%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23B9F23D%22/><rect x=%229%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%237FA31C%22/><rect x=%2254%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%233C4D0C%22/></svg>">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -21,7 +21,6 @@
       <li><a href="../contact.html">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="focus.html" class="btn btn-primary hide-mobile">Explore Focus</a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line class="l1" x1="3" y1="6" x2="21" y2="6"/><line class="l2" x1="3" y1="12" x2="21" y2="12"/><line class="l3" x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -35,88 +34,40 @@
   <a href="../about.html">About</a>
   <a href="../support.html">Support</a>
   <a href="../contact.html">Contact</a>
-  <a href="focus.html">Explore Focus</a>
 </div>
 
-<div class="hero-wrap">
-  <div class="bg-glow" style="top: -160px; left: 50%; transform: translateX(-50%);"></div>
-  <header class="hero hero-split">
-    <div class="container hero-split-row">
-      <div class="hero-split-text">
-        <h1>A USB hub that listens to your focus score.</h1>
-        <p class="lede">The Focus USB Hub is a small piece of desk hardware controlled directly by the Focus app. Go over your screen-time line, and it can throttle or stop charging the devices plugged into it, automatically, with no app-switching required.</p>
-        <div class="hero-ctas">
-          <a href="../contact.html" class="btn btn-primary btn-lg">Get updates</a>
-          <a href="focus.html" class="btn btn-secondary btn-lg">See how Focus scores your day</a>
-        </div>
-        <p class="hero-note">Concept stage · Design and specs are still being finalized</p>
-      </div>
-      <div class="hero-split-visual" data-reveal>
-        <div class="hero-score-card mockup" style="transform:rotate(2deg);">
-          <div class="hub-ports">
-            <span class="port on"></span>
-            <span class="port on"></span>
-            <span class="port throttled"></span>
-            <span class="port"></span>
-          </div>
-          <div class="hub-status"><span class="pulse-dot"></span>Reacts to your Focus Score live</div>
-        </div>
-      </div>
-    </div>
-  </header>
-</div>
-
-<!-- Visual mockup of hub reacting to screen time -->
-<section class="section-tight">
+<header class="hero">
   <div class="container">
-    <div class="device-frame mockup" style="max-width:760px; margin:0 auto; padding:44px;">
-      <div style="display:flex; flex-wrap:wrap; gap:40px; align-items:center; justify-content:center;">
-        <div style="text-align:center;">
-          <div style="width:220px; height:64px; border-radius:14px; background:rgba(255,255,255,0.05); border:1px solid var(--card-border); display:flex; align-items:center; justify-content:space-evenly; margin:0 auto 14px;">
-            <span style="width:9px;height:30px;border-radius:3px;background:var(--productive-fg,var(--productive));"></span>
-            <span style="width:9px;height:30px;border-radius:3px;background:var(--productive-fg,var(--productive));"></span>
-            <span style="width:9px;height:30px;border-radius:3px;background:var(--productive-fg,var(--productive));"></span>
-            <span style="width:9px;height:30px;border-radius:3px;background:rgba(255,255,255,0.12);"></span>
-          </div>
-          <span class="tag tag-productive">Charging normally</span>
-          <p style="font-size:12.5px; color:var(--text-tertiary); margin-top:8px;">Focus Score: 82 · under daily limit</p>
-        </div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:22px;height:22px; color:var(--text-tertiary); flex-shrink:0;"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        <div style="text-align:center;">
-          <div style="width:220px; height:64px; border-radius:14px; background:rgba(255,255,255,0.05); border:1px solid var(--card-border); display:flex; align-items:center; justify-content:space-evenly; margin:0 auto 14px;">
-            <span style="width:9px;height:30px;border-radius:3px;background:var(--distracted-fg,var(--distracted));"></span>
-            <span style="width:9px;height:16px;border-radius:3px;background:rgba(255,255,255,0.12); align-self:center;"></span>
-            <span style="width:9px;height:16px;border-radius:3px;background:rgba(255,255,255,0.12); align-self:center;"></span>
-            <span style="width:9px;height:16px;border-radius:3px;background:rgba(255,255,255,0.12); align-self:center;"></span>
-          </div>
-          <span class="tag tag-distracted">Charging throttled</span>
-          <p style="font-size:12.5px; color:var(--text-tertiary); margin-top:8px;">Focus Score: 41 · over distracted-time cap</p>
-        </div>
-      </div>
+    <h1>A USB hub that listens to your focus score.</h1>
+    <p class="lede">A small piece of desk hardware controlled by Focus. Cross your screen-time line, and it throttles or stops charging automatically, no app-switching required.</p>
+    <div class="hero-ctas">
+      <a href="../contact.html" class="btn btn-primary btn-lg">Get updates</a>
+      <a href="focus.html" class="btn btn-secondary btn-lg">See how Focus scores your day</a>
     </div>
+    <p class="hero-note">Concept stage · Design and specs are still being finalized</p>
   </div>
-</section>
+</header>
 
 <!-- How it connects to Focus -->
-<section>
+<section class="section-alt">
   <div class="container">
-    <div class="section-head center" data-reveal>
+    <div class="section-head center">
       <div class="eyebrow">How it works with Focus</div>
       <h2>Your focus score becomes a physical signal</h2>
-      <p>The hub doesn't make its own decisions. It just reacts to the same score you already see in the app.</p>
+      <p>The hub doesn't decide anything on its own. It reacts to the score you already see in the app.</p>
     </div>
     <div class="grid-3">
-      <div class="card step-card" data-reveal="1">
+      <div class="card step-card">
         <div class="step-number">01</div>
         <h3>Focus tracks your day</h3>
         <p>The Focus app keeps classifying your time and updating your score exactly as it does today.</p>
       </div>
-      <div class="card step-card" data-reveal="2">
+      <div class="card step-card">
         <div class="step-number">02</div>
         <h3>You set the rule</h3>
         <p>Choose a trigger (a distracted-time cap, a minimum score, or a specific time of day) and what should happen when it's crossed.</p>
       </div>
-      <div class="card step-card" data-reveal="3">
+      <div class="card step-card">
         <div class="step-number">03</div>
         <h3>The hub responds instantly</h3>
         <p>Connected over USB to your PC, the hub throttles or cuts charging on chosen ports the moment your rule is triggered, and restores it automatically once you're back under the line.</p>
@@ -125,34 +76,29 @@
   </div>
 </section>
 
-<!-- Placeholder feature grid -->
+<!-- Planned features -->
 <section class="section-tight">
   <div class="container">
-    <div class="section-head center" data-reveal>
+    <div class="section-head center">
       <div class="eyebrow">Planned features</div>
       <h2>What we're designing toward</h2>
-      <p>Subject to change as the hardware moves from concept to prototype.</p>
     </div>
-    <div class="grid-4">
-      <div class="metric-card" data-reveal="1">
-        <div class="metric-icon ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
+    <div class="plain-grid">
+      <div class="plain-item">
         <h3>Per-port control</h3>
-        <p>Set different rules for different ports: throttle a phone, leave a work laptop untouched.</p>
+        <p>Different rules per port: throttle a phone, leave a work laptop untouched.</p>
       </div>
-      <div class="metric-card" data-reveal="2">
-        <div class="metric-icon ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <div class="plain-item">
         <h3>Screen-time triggers</h3>
-        <p>Trigger on distracted-time caps, a minimum score, or time-of-day windows you define in Focus.</p>
+        <p>Trigger on a distracted-time cap, a minimum score, or a time-of-day window.</p>
       </div>
-      <div class="metric-card" data-reveal="3">
-        <div class="metric-icon ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l16 16M4 20L20 4"/></svg></div>
+      <div class="plain-item">
         <h3>Manual override</h3>
-        <p>A physical or in-app override for when you genuinely need power, no questions asked.</p>
+        <p>A physical or in-app override for when you genuinely need power.</p>
       </div>
-      <div class="metric-card" data-reveal="4">
-        <div class="metric-icon ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div>
+      <div class="plain-item">
         <h3>Local pairing only</h3>
-        <p>Talks to the Focus app on the same machine over USB, with no cloud pairing and no app store account.</p>
+        <p>Talks to Focus over USB on the same machine. No cloud, no account.</p>
       </div>
     </div>
   </div>
@@ -160,7 +106,7 @@
 
 <section>
   <div class="container">
-    <div class="cta-band" data-reveal>
+    <div class="cta-band">
       <h2>Want to know when it's ready?</h2>
       <p>We'll share prototypes and specs as the hub moves out of the concept stage.</p>
       <div class="hero-ctas">
@@ -176,7 +122,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-brand">
         <a href="../index.html" class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-word"><span class="w1">MCRB</span><span class="w2">Labs</span></span></a>
-        <p>Software and hardware for people who already care about their focus. Built by Rian Borkakoty and Matteo Carriere.</p>
+        <p>A small team building software and hardware, one product at a time. Founded by Rian Borkakoty and Matteo Carriere.</p>
       </div>
       <div class="footer-col">
         <h4>Projects</h4>
@@ -203,7 +149,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span><a class="cpy-mark" href="../testHome.html">©</a> 2026 MCRB Labs. All rights reserved.</span>
+      <span>© 2026 MCRB Labs. All rights reserved.</span>
       <div class="legal-links">
         <a href="../privacy.html">Privacy</a>
         <a href="../terms.html">Terms</a>

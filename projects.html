@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects | MCRB Labs</title>
 <meta name="description" content="What MCRB Labs is building: Focus, an automatic screen-time tracker for Windows, and the Focus USB Hub, a piece of hardware it controls.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23101007%22/><rect x=%229%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23E7FFA8%22/><rect x=%2254%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23B9F23D%22/><rect x=%229%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%237FA31C%22/><rect x=%2254%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%233C4D0C%22/><text x=%2227.5%22 y=%2234%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>M</text><text x=%2272.5%22 y=%2234%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>C</text><text x=%2227.5%22 y=%2279%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23101007%22 text-anchor=%22middle%22>R</text><text x=%2272.5%22 y=%2279%22 font-family=%22Arial%22 font-size=%2219%22 font-weight=%22800%22 fill=%22%23F4F3E9%22 text-anchor=%22middle%22>B</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23101007%22/><rect x=%229%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23E7FFA8%22/><rect x=%2254%22 y=%229%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%23B9F23D%22/><rect x=%229%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%237FA31C%22/><rect x=%2254%22 y=%2254%22 width=%2237%22 height=%2237%22 rx=%228%22 fill=%22%233C4D0C%22/></svg>">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,7 +21,6 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="projects/focus.html" class="btn btn-primary hide-mobile">Download Focus</a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line class="l1" x1="3" y1="6" x2="21" y2="6"/><line class="l2" x1="3" y1="12" x2="21" y2="12"/><line class="l3" x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -35,89 +34,45 @@
   <a href="about.html">About</a>
   <a href="support.html">Support</a>
   <a href="contact.html">Contact</a>
-  <a href="projects/focus.html">Download Focus</a>
 </div>
 
 <header class="page-hero">
   <div class="container">
     <div class="page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
     <div class="eyebrow">Projects</div>
-    <h1>Two things, built to work together</h1>
-    <p>Focus reads your screen time honestly. The USB hub is the first piece of hardware that acts on what it sees. Both are early, and this page will grow as we ship.</p>
+    <h1>What we're building</h1>
+    <p>Focus reads your screen time honestly. The USB hub acts on what it sees.</p>
   </div>
 </header>
 
 <section class="section-tight">
   <div class="container">
-    <div style="display:flex; flex-direction:column; gap:28px;">
+    <div class="grid-2">
 
-      <a href="projects/focus.html" class="card card-hover project-card" data-reveal>
-        <div class="pc-visual mockup">
-          <div style="width:100%; max-width:320px; border-radius:14px; overflow:hidden; border:1px solid var(--card-border);">
-            <div class="device-titlebar"><span></span><span></span><span></span></div>
-            <div style="padding:20px;">
-              <div class="score-ring-wrap" style="margin-bottom:16px; gap:16px;">
-                <div class="score-ring" data-score="78" style="width:64px;height:64px;"><span class="score-num" style="font-size:17px;">78</span></div>
-                <div class="score-meta">
-                  <div class="score-label">FOCUS SCORE</div>
-                  <div class="score-streak">🔥 7-day streak</div>
-                </div>
-              </div>
-              <div class="usage-strip" style="height:20px;">
-                <span style="width:60%; background:var(--productive-fg,var(--productive));"></span>
-                <span style="width:25%; background:var(--distracted-fg,var(--distracted));"></span>
-                <span style="width:15%; background:var(--neutral);"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pc-body">
-          <span class="tag tag-accent">Software · In development</span>
-          <h3>Focus</h3>
-          <p>An automatic screen-time tracker for Windows. It watches your foreground window, classifies your time as productive, distracted, or neutral, and scores your day 0–100. No manual timers.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Fully automatic classification</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Local-only storage, nothing leaves your machine</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>History, goals, leaderboard, and share views</li>
-          </ul>
-          <span class="btn btn-primary">View Focus →</span>
-        </div>
+      <a href="projects/focus.html" class="card card-hover" style="display:flex; flex-direction:column;">
+        <span class="tag tag-accent" style="margin-bottom:16px; align-self:flex-start;">Software · In development</span>
+        <h3 style="font-size:24px; margin-bottom:12px;">Focus</h3>
+        <p style="color:var(--text-secondary); font-size:15px; margin-bottom:22px;">An automatic screen-time tracker for Windows. Scores your day 0–100. No manual timers.</p>
+        <ul style="list-style:none; padding:0; margin:0 0 26px; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text-secondary);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="width:15px;height:15px;color:var(--accent-fg);flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>Fully automatic classification</li>
+          <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text-secondary);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="width:15px;height:15px;color:var(--accent-fg);flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>Local-only storage, nothing leaves your machine</li>
+          <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text-secondary);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="width:15px;height:15px;color:var(--accent-fg);flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>History, goals, and a daily streak</li>
+        </ul>
+        <span class="btn btn-primary" style="margin-top:auto; align-self:flex-start;">View Focus →</span>
       </a>
 
-      <a href="projects/usb-hub.html" class="card card-hover project-card" data-reveal="1">
-        <div class="pc-visual mockup">
-          <div style="width:100%; max-width:320px; display:flex; flex-direction:column; align-items:center; gap:18px;">
-            <div style="width:180px; height:56px; border-radius:12px; background:rgba(255,255,255,0.04); border:1px solid var(--card-border); display:flex; align-items:center; justify-content:space-evenly;">
-              <span style="width:8px;height:26px;border-radius:3px;background:var(--productive-fg,var(--productive));"></span>
-              <span style="width:8px;height:26px;border-radius:3px;background:var(--productive-fg,var(--productive));"></span>
-              <span style="width:8px;height:26px;border-radius:3px;background:var(--distracted-fg,var(--distracted));"></span>
-              <span style="width:8px;height:26px;border-radius:3px;background:rgba(255,255,255,0.12);"></span>
-            </div>
-            <span class="tag tag-distracted">Charging throttled: screen time limit reached</span>
-          </div>
-        </div>
-        <div class="pc-body">
-          <span class="tag tag-accent">Hardware · Concept</span>
-          <h3>Focus USB Hub</h3>
-          <p>A physical USB hub that takes instructions from the Focus app. Cross your screen-time line for the day, and it can throttle or cut power to connected devices until you're back on track.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Controlled directly by your Focus Score</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Configurable per-port rules</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Early concept, details coming soon</li>
-          </ul>
-          <span class="btn btn-secondary">View USB Hub →</span>
-        </div>
+      <a href="projects/usb-hub.html" class="card card-hover" style="display:flex; flex-direction:column;">
+        <span class="tag tag-accent" style="margin-bottom:16px; align-self:flex-start;">Hardware · Concept</span>
+        <h3 style="font-size:24px; margin-bottom:12px;">Focus USB Hub</h3>
+        <p style="color:var(--text-secondary); font-size:15px; margin-bottom:22px;">A physical USB hub controlled by Focus. Cross your screen-time line, and it throttles power until you're back on track.</p>
+        <ul style="list-style:none; padding:0; margin:0 0 26px; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text-secondary);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="width:15px;height:15px;color:var(--accent-fg);flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>Controlled directly by your Focus Score</li>
+          <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text-secondary);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="width:15px;height:15px;color:var(--accent-fg);flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>Configurable per-port rules</li>
+          <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text-secondary);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="width:15px;height:15px;color:var(--accent-fg);flex-shrink:0;"><path d="M20 6L9 17l-5-5"/></svg>No cloud pairing, no account</li>
+        </ul>
+        <span class="btn btn-secondary" style="margin-top:auto; align-self:flex-start;">View USB Hub →</span>
       </a>
 
-    </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <div class="card" style="padding:40px; text-align:center;" data-reveal>
-      <h2 style="font-size:22px; margin-bottom:10px;">More on the way</h2>
-      <p style="color:var(--text-secondary); font-size:15px; max-width:480px; margin:0 auto;">We're a two-person team, so we're deliberately keeping this list short. As Focus and the USB hub mature, new projects will show up here first.</p>
     </div>
   </div>
 </section>
@@ -127,7 +82,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-brand">
         <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-word"><span class="w1">MCRB</span><span class="w2">Labs</span></span></a>
-        <p>Software and hardware for people who already care about their focus. Built by Rian Borkakoty and Matteo Carriere.</p>
+        <p>A small team building software and hardware, one product at a time. Founded by Rian Borkakoty and Matteo Carriere.</p>
       </div>
       <div class="footer-col">
         <h4>Projects</h4>
@@ -154,7 +109,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span><a class="cpy-mark" href="testHome.html">©</a> 2026 MCRB Labs. All rights reserved.</span>
+      <span>© 2026 MCRB Labs. All rights reserved.</span>
       <div class="legal-links">
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
