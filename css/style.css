@@ -569,6 +569,49 @@ section { padding: 96px 0; }
 }
 
 /* ---------------------------------------------------------------------- */
+/* Homepage hero — the brand mark and name are the headline, not a         */
+/* generic mission line                                                    */
+/* ---------------------------------------------------------------------- */
+
+.home-hero { padding: 96px 0 56px; }
+.home-mark {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 32px;
+}
+.home-mark::before {
+  content: '';
+  position: absolute;
+  inset: -44px;
+  background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+  z-index: -1;
+}
+.brand-mark-lg {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-lg);
+  background: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  padding: 9px;
+}
+.brand-mark-lg i { display: block; border-radius: 10px; font-style: normal; }
+.brand-mark-lg i:nth-child(1) { background: var(--accent-bright); }
+.brand-mark-lg i:nth-child(2) { background: var(--accent); }
+.brand-mark-lg i:nth-child(3) { background: #7FA31C; }
+.brand-mark-lg i:nth-child(4) { background: #3C4D0C; }
+
+.home-hero h1 { font-size: clamp(40px, 7vw, 68px); }
+
+.section-title {
+  text-align: center;
+  font-size: clamp(26px, 3.4vw, 36px);
+  margin-bottom: 36px;
+}
+
+/* ---------------------------------------------------------------------- */
 /* Grids                                                                   */
 /* ---------------------------------------------------------------------- */
 
