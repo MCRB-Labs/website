@@ -776,7 +776,10 @@ section { padding: 96px 0; }
   font-size: 24px; font-weight: 700;
   color: var(--ink);
 }
-.team-card h3 { font-size: 18px; margin-bottom: 4px; }
+.team-name-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 4px; }
+.team-card h3 { font-size: 18px; margin: 0; }
+.team-name-row .social-icon { width: 24px; height: 24px; border-radius: 6px; }
+.team-name-row .social-icon svg { width: 13px; height: 13px; }
 .team-card .role { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-fg); font-weight: 500; margin-bottom: 14px; }
 .team-card p.bio { font-size: 14.5px; color: var(--text-secondary); }
 
@@ -842,6 +845,19 @@ section { padding: 96px 0; }
 .contact-channel h4 { font-size: 15.5px; margin-bottom: 4px; }
 .contact-channel p { font-size: 14px; color: var(--text-secondary); }
 .contact-channel a.cc-link { color: var(--accent-fg); font-weight: 600; font-size: 14px; }
+
+.social-row { display: flex; gap: 12px; margin-top: 8px; }
+.social-icon {
+  width: 42px; height: 42px;
+  border-radius: var(--radius-xs);
+  background: var(--accent-soft);
+  color: var(--accent-fg);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.social-icon svg { width: 19px; height: 19px; }
+.social-icon:hover { background: var(--accent); color: var(--ink); transform: translateY(-1px); }
 
 /* ---------------------------------------------------------------------- */
 /* Legal pages (Privacy / Terms)                                          */
