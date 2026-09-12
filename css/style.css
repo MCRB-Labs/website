@@ -354,9 +354,6 @@ section { padding: 96px 0; }
   box-shadow: var(--shadow-soft);
 }
 
-.card-hover { transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), border-color 0.2s var(--ease); }
-.card-hover:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
-
 /* cursor-follow spotlight: a soft glow that tracks the pointer on hover */
 .card-hover, .metric-card, .step-card, .team-card {
   position: relative;
