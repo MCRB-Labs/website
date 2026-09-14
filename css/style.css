@@ -703,6 +703,78 @@ section { padding: 96px 0; }
   .plain-grid, .plain-grid.cols-2 { grid-template-columns: 1fr; }
 }
 
+/* Live app mockup — shares .plain-grid's columns/gap so this row's card   */
+/* edges land exactly under the eyebrow row above it.                      */
+
+.app-mock-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 38px;
+  margin-bottom: 20px;
+}
+.app-mock-head h3 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; }
+.app-mock-date { font-size: 15px; color: var(--text-tertiary); }
+
+.app-mock-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+}
+.app-mock-card {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app-mock-card-score { flex-direction: row; align-items: center; gap: 16px; }
+
+.app-mock-ring {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent-deep) calc(var(--pct) * 3.6deg), var(--card-border) 0);
+  flex-shrink: 0;
+}
+.app-mock-ring::after {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: var(--card);
+}
+.app-mock-ring-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.app-mock-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-tertiary); }
+.app-mock-label-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.app-mock-value { font-size: 27px; font-weight: 700; color: var(--text-primary); }
+.app-mock-unit { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
+.app-mock-sub { font-size: 14px; color: var(--text-secondary); }
+
+.app-mock-track { height: 6px; border-radius: 999px; background: var(--card-border); overflow: hidden; }
+.app-mock-fill { height: 100%; border-radius: inherit; background: var(--accent-deep); }
+.app-mock-fill-streak { background: #3B82F6; }
+.app-mock-fill-neutral { background: var(--text-tertiary); }
+.app-mock-sparkline { flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .app-mock-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .app-mock-grid { grid-template-columns: 1fr; }
+  .app-mock-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
+
 /* ---------------------------------------------------------------------- */
 /* Prose stack — plain stacked text blocks, no cards, for a section that  */
 /* follows a card grid and needs a visibly different rhythm                */
